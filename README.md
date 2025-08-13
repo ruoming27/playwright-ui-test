@@ -51,16 +51,19 @@ Run tests with HTML report:\
 pytest --html=report.html --self-contained-html
 
 📂 Example Test Cases\
-test_login.py
+test_login.py\
+
 test_successful_login: Verifies that a valid user can log in and navigate to the inventory page.
+
 test_locked_out_user: Verifies that a locked-out user sees the appropriate error message.
 
 🖥 Sample Code\
+
 login_page.py
 
 from playwright.sync_api import Page
 
-class LoginPage:\
+class LoginPage:
     def __init__(self, page: Page):
         self.page = page
         self.username_input = page.locator("#user-name")
